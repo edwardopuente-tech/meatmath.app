@@ -57,8 +57,8 @@ export function MeatPicker({ selectedMeats, onChange }: Props) {
                   : 'border-gray-200 bg-white hover:bg-gray-50 hover:border-gray-300 hover:-translate-y-1 shadow-sm hover:shadow-md'
               }`}
             >
-              <div className="w-full pr-4 text-left">
-                <span className={`block text-xs sm:text-[14px] font-bold leading-tight break-normal overflow-wrap-normal ${isSelected ? 'text-white' : 'text-gray-900 group-hover:text-bbq-charcoal'}`}>
+              <div className="w-full text-center">
+                <span className={`block text-xs sm:text-[14px] font-extrabold leading-tight break-normal overflow-wrap-normal uppercase tracking-wider ${isSelected ? 'text-white' : 'text-gray-900 group-hover:text-bbq-charcoal'}`}>
                   {meat.name}
                 </span>
               </div>
