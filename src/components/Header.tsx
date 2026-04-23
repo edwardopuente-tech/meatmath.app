@@ -139,7 +139,7 @@ export function Header({ unit, onUnitToggle }: Props) {
                 <span className="transform skew-x-12 inline-block">MATH</span>
               </span>
             </h1>
-            <p className="flex items-center gap-1.5 text-[9px] md:text-[10px] text-gray-500 font-black uppercase tracking-[0.2em] mt-1.5 pl-0.5 leading-none">
+            <p className="flex items-center gap-1.5 text-xs text-gray-500 font-black uppercase tracking-[0.2em] mt-1.5 pl-0.5 leading-none">
               The Pitmaster's Calculator
             </p>
           </div>
@@ -165,7 +165,7 @@ export function Header({ unit, onUnitToggle }: Props) {
               }`} 
             />
             {/* Text Options */}
-            <div className="relative w-full flex text-[10px] font-bold z-10 uppercase tracking-widest pointer-events-none">
+            <div className="relative w-full flex text-xs font-bold z-10 uppercase tracking-widest pointer-events-none">
               <span className={`flex-1 text-center transition-colors duration-300 ${unit === 'imperial' ? 'text-gray-900 drop-shadow-sm' : 'text-gray-400'}`}>
                 LBS
               </span>

@@ -48,34 +48,34 @@ export function ResultsDashboard({ results, unit, totalRawImperial, totalRawMetr
           {/* Header / Meat Name */}
           <div className="bg-gray-50/50 border-b border-gray-100 px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between print:bg-white print:border-b-2 print:border-black">
             <div>
-              <h3 className="text-lg font-bold text-gray-900">{res.meat.name}</h3>
-              <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">{res.meat.category}</p>
+              <h3 className="text-xl font-bold text-gray-900">{res.meat.name}</h3>
+              <p className="text-sm text-gray-500 font-medium uppercase tracking-wider">{res.meat.category}</p>
             </div>
-            <div className="mt-2 sm:mt-0 text-left sm:text-right">
-              <p className="text-2xl font-black text-bbq-orange print:text-black">
+            <div className="mt-4 sm:mt-0 text-left sm:text-right bg-orange-50/50 p-4 rounded-2xl border border-orange-100/50 sm:bg-transparent sm:border-0 sm:p-0">
+              <p className="text-3xl font-black text-bbq-orange print:text-black">
                 Buy {formatWeight(res.rawWeightNeededImperial, res.rawWeightNeededMetric)} raw
               </p>
-              <p className="text-sm text-gray-500 font-medium">
+              <p className="text-base text-gray-500 font-medium mt-1">
                 Yields ~{formatWeight(res.cookedWeightExpectedImperial, res.cookedWeightExpectedMetric)} cooked
               </p>
             </div>
           </div>
 
           {/* Recommendations / Cook Details */}
-          <div className="px-6 py-4 grid grid-cols-2 md:grid-cols-4 gap-4 print:bg-white">
+          <div className="px-6 py-5 grid grid-cols-2 md:grid-cols-4 gap-6 print:bg-white border-t border-gray-100">
             <div>
-              <span className="block text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1 print:text-black">Target Temp</span>
-              <span className="font-semibold text-gray-800 text-sm print:text-black">
+              <span className="block text-xs text-gray-400 uppercase font-bold tracking-wider mb-1 print:text-black">Target Temp</span>
+              <span className="font-bold text-gray-800 text-base print:text-black">
                 {isMetric ? res.meat.recommendations.tempC : res.meat.recommendations.tempF}
               </span>
             </div>
             <div>
-              <span className="block text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1 print:text-black">Wood Type</span>
-              <span className="font-semibold text-gray-800 text-sm print:text-black">{res.meat.recommendations.wood}</span>
+              <span className="block text-xs text-gray-400 uppercase font-bold tracking-wider mb-1 print:text-black">Wood Type</span>
+              <span className="font-bold text-gray-800 text-base print:text-black">{res.meat.recommendations.wood}</span>
             </div>
             <div className="col-span-2 md:col-span-2">
-              <span className="block text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1 print:text-black">Cook Notes</span>
-              <span className="font-medium text-gray-600 text-sm leading-tight print:text-black">{res.meat.recommendations.notes}</span>
+              <span className="block text-xs text-gray-400 uppercase font-bold tracking-wider mb-1 print:text-black">Cook Notes</span>
+              <span className="font-semibold text-gray-600 text-sm leading-relaxed print:text-black">{res.meat.recommendations.notes}</span>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ export function ResultsDashboard({ results, unit, totalRawImperial, totalRawMetr
         {/* Global Summary */}
         <div className="rounded-3xl bg-gray-900 border border-gray-800 text-white p-6 shadow-2xl relative overflow-hidden mt-8 print:border-2 print:border-black print:bg-white print:text-black print:shadow-none">
           <div className="absolute top-0 right-0 w-32 h-32 bg-bbq-orange opacity-20 blur-3xl print:hidden"></div>
-          <span className="text-[10px] font-bold text-orange-400 uppercase tracking-widest print:text-black">Total Requirement</span>
+          <span className="text-xs font-bold text-orange-400 uppercase tracking-widest print:text-black">Total Requirement</span>
           
           <div className="mt-4 relative z-10">
             <div className="flex items-baseline gap-2">
@@ -163,17 +163,17 @@ export function ResultsDashboard({ results, unit, totalRawImperial, totalRawMetr
                          
                          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                             <div>
-                              <span className="block text-[10px] text-gray-500 uppercase font-black tracking-widest mb-1">Target Temp</span>
+                              <span className="block text-xs text-gray-500 uppercase font-black tracking-widest mb-1">Target Temp</span>
                               <span className="font-bold text-black text-sm">
                                 {isMetric ? res.meat.recommendations.tempC : res.meat.recommendations.tempF}
                               </span>
                             </div>
                             <div>
-                              <span className="block text-[10px] text-gray-500 uppercase font-black tracking-widest mb-1">Wood Type</span>
+                              <span className="block text-xs text-gray-500 uppercase font-black tracking-widest mb-1">Wood Type</span>
                               <span className="font-bold text-black text-sm">{res.meat.recommendations.wood}</span>
                             </div>
                             <div className="col-span-2 lg:col-span-2">
-                              <span className="block text-[10px] text-gray-500 uppercase font-black tracking-widest mb-1">Cook Notes</span>
+                              <span className="block text-xs text-gray-500 uppercase font-black tracking-widest mb-1">Cook Notes</span>
                               <span className="font-bold text-black text-sm leading-tight">{res.meat.recommendations.notes}</span>
                             </div>
                          </div>
