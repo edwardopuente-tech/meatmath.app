@@ -54,22 +54,27 @@ export function MeatPicker({ selectedMeats, onChange }: Props) {
               className={`relative px-4 py-4 border rounded-xl cursor-pointer transition-all flex flex-col justify-between min-h-[110px] active:scale-95 overflow-hidden ${
                 isSelected 
                   ? 'border-bbq-orange bg-bbq-orange text-white shadow-md' 
-                  : 'border-gray-200 bg-white shadow-sm'
+                  : 'border-gray-200 bg-white shadow-sm hover:border-gray-300'
               }`}
             >
-              <div className="flex justify-between items-start mb-2 gap-8">
+              <div className="flex justify-between items-start mb-2 pr-4">
                 <span className={`text-base font-semibold leading-tight break-words ${isSelected ? 'text-white' : 'text-gray-900'}`}>
                   {meat.name}
                 </span>
-                <div className={`absolute top-3 right-3 w-6 h-6 rounded-full flex items-center justify-center shrink-0 transition-all ${
-                  isSelected ? 'bg-white text-bbq-orange shadow-sm scale-100' : 'bg-gray-100/80 text-gray-400 scale-90'
+              </div>
+
+              <div className="flex items-end justify-between mt-auto">
+                <p className={`text-sm leading-tight font-bold ${isSelected ? 'text-orange-100' : 'text-gray-500'}`}>
+                  Yields ~{Math.round(meat.yieldPercentage * 100)}% cooked.
+                </p>
+                <div className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 transition-all ${
+                  isSelected 
+                    ? 'bg-white text-bbq-orange shadow-md scale-110 opacity-100' 
+                    : 'bg-gray-100 text-transparent scale-75 opacity-0'
                 }`}>
                   <Check size={14} strokeWidth={4} />
                 </div>
               </div>
-              <p className={`text-sm leading-tight font-bold mt-auto ${isSelected ? 'text-orange-50' : 'text-gray-500'}`}>
-                Yields ~{Math.round(meat.yieldPercentage * 100)}% cooked.
-              </p>
             </div>
           )
         })}
