@@ -47,17 +47,17 @@ export function Header({ unit, onUnitToggle }: Props) {
           {/* Unit Toggle Switch */}
           <button 
             onClick={onUnitToggle}
-            className="relative flex items-center w-40 h-14 bg-gray-100/80 rounded-full p-2 border border-gray-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-bbq-orange focus:ring-offset-1 transition hover:bg-gray-200/50 shadow-inner"
+            className="relative flex items-center w-32 h-11 bg-gray-100/80 rounded-full p-1.5 border border-gray-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-bbq-orange focus:ring-offset-1 transition hover:bg-gray-200/50 shadow-inner"
             aria-label="Toggle Units"
           >
             {/* Sliding Pill */}
             <div 
-              className={`absolute top-2 left-2 bg-white w-18 h-10 rounded-full shadow-sm border border-gray-200 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-                unit === 'metric' ? 'translate-x-[80px]' : 'translate-x-0'
+              className={`absolute top-1.5 left-1.5 bg-white w-[56px] h-8 rounded-full shadow-sm border border-gray-200 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                unit === 'metric' ? 'translate-x-[58px]' : 'translate-x-0'
               }`} 
             />
             {/* Text Options */}
-            <div className="relative w-full flex text-base font-bold z-10 uppercase tracking-[0.2em] pointer-events-none">
+            <div className="relative w-full flex text-sm font-bold z-10 uppercase tracking-[0.15em] pointer-events-none">
               <span className={`flex-1 text-center transition-colors duration-300 ${unit === 'imperial' ? 'text-gray-900 drop-shadow-sm' : 'text-gray-400'}`}>
                 LBS
               </span>

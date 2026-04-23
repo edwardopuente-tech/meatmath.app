@@ -42,7 +42,10 @@ export default function App() {
           <div>
             <h3 className="text-base font-bold text-gray-900 mb-1">Pitmaster-Grade Precision</h3>
             <p className="text-sm md:text-base text-gray-600 leading-relaxed font-medium">
-              We execute the golden rule: <span className="font-mono bg-white px-2 py-0.5 rounded border border-gray-200 text-bbq-orange font-bold whitespace-nowrap">Raw Meat = (People × Serving Size) / Yield</span>. 
+              We execute the golden rule:
+              <span className="block my-2 font-mono bg-white px-3 py-1.5 rounded-lg border border-gray-200 text-bbq-orange font-bold text-[11px] sm:text-xs md:text-sm w-fit shadow-sm">
+                Raw Meat = (People × Serving Size) / Yield
+              </span>
               The engine automatically injects BBQ-specific real-world logic (shrinkage rates, kid sizes, and multi-meat spreads) so you don't have to calculate those manually!
             </p>
           </div>
