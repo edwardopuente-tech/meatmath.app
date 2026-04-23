@@ -51,20 +51,20 @@ export function MeatPicker({ selectedMeats, onChange }: Props) {
             <div 
               key={meat.id}
               onClick={() => toggleMeat(meat)}
-              className={`group relative px-3 sm:px-4 py-6 sm:py-8 border rounded-2xl cursor-pointer transition-all duration-200 flex items-center justify-center min-h-[80px] sm:min-h-[100px] active:scale-95 ${
+              className={`group relative px-4 py-5 border rounded-2xl cursor-pointer transition-all duration-200 flex flex-col justify-center min-h-[85px] sm:min-h-[105px] active:scale-95 ${
                 isSelected 
                   ? 'border-bbq-orange bg-bbq-orange text-white shadow-[0_10px_20px_-5px_rgba(194,65,12,0.3)]' 
                   : 'border-gray-200 bg-white hover:bg-gray-50 hover:border-gray-300 hover:-translate-y-1 shadow-sm hover:shadow-md'
               }`}
             >
-              <div className="w-full text-center px-2">
-                <span className={`block text-sm sm:text-base font-bold leading-tight break-normal uppercase tracking-wide ${isSelected ? 'text-white' : 'text-gray-900 group-hover:text-bbq-charcoal'}`}>
+              <div className="w-full pr-6">
+                <span className={`block text-sm sm:text-base font-bold leading-tight break-words ${isSelected ? 'text-white' : 'text-gray-900 group-hover:text-bbq-charcoal'}`}>
                   {meat.name}
                 </span>
               </div>
 
               {isSelected && (
-                <div className="absolute top-2 right-2 w-5 h-5 rounded-full bg-white text-bbq-orange flex items-center justify-center shadow-sm">
+                <div className="absolute top-3 right-3 w-5 h-5 rounded-full bg-white text-bbq-orange flex items-center justify-center shadow-sm">
                   <Check size={12} strokeWidth={4} />
                 </div>
               )}
