@@ -17,7 +17,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'beef-ribs',
-    name: 'Beef Short Ribs',
+    name: 'Short Ribs',
     category: 'Beef',
     basePortionCooked: 0.75, // Need more weight due to heavy bones
     yieldPercentage: 0.45, 
@@ -30,7 +30,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'beef-burgers',
-    name: 'Burgers (Patties)',
+    name: 'Burgers',
     category: 'Beef',
     basePortionCooked: 0.25, // 1/4 lb cooked output
     yieldPercentage: 0.75, // Standard 1/3 lb pre-cooked patty shrinks to 1/4 lb
@@ -43,7 +43,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'beef-steak',
-    name: 'Steaks (Ribeye, Strip)',
+    name: 'Steaks',
     category: 'Beef',
     basePortionCooked: 0.6,
     yieldPercentage: 0.85,
@@ -69,7 +69,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'beef-fajitas',
-    name: 'Beef Fajitas (Skirt Steak)',
+    name: 'Fajitas',
     category: 'Beef',
     basePortionCooked: 0.35,
     yieldPercentage: 0.70, // Equals exactly 0.5 lbs raw per person (Tex-Mex catering gold standard)
@@ -82,7 +82,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'beef-mollejas',
-    name: 'Mollejas (Beef Sweetbreads)',
+    name: 'Mollejas',
     category: 'Beef',
     basePortionCooked: 0.3,
     yieldPercentage: 0.6,
@@ -95,7 +95,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'beef-dino-ribs',
-    name: 'Beef Plate Ribs (Dino Ribs)',
+    name: 'Dino Ribs',
     category: 'Beef',
     basePortionCooked: 0.8, // extremely high bone weight
     yieldPercentage: 0.40,  // very high loss due to fat and bone mass
@@ -121,7 +121,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'beef-picanha',
-    name: 'Picanha (Coulotte)',
+    name: 'Picanha',
     category: 'Beef',
     basePortionCooked: 0.5,
     yieldPercentage: 0.80,
@@ -134,7 +134,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'beef-cheeks',
-    name: 'Beef Cheeks (Barbacoa)',
+    name: 'Barbacoa',
     category: 'Beef',
     basePortionCooked: 0.35,
     yieldPercentage: 0.50,
@@ -147,7 +147,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'beef-chuck-roast',
-    name: 'Chuck Roast (Poor Man\'s Brisket)',
+    name: 'Chuck Roast',
     category: 'Beef',
     basePortionCooked: 0.4,
     yieldPercentage: 0.60,
@@ -162,7 +162,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   // PORK
   {
     id: 'pork-butt',
-    name: 'Pulled Pork (Shoulder / Butt)',
+    name: 'Pulled Pork',
     category: 'Pork',
     basePortionCooked: 0.33, // 1/3 lb cooked per person
     yieldPercentage: 0.50, // Leads to exactly 0.66 lbs raw per person (Catering standard)
@@ -175,7 +175,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'pork-ribs',
-    name: 'Pork Ribs (Baby Back / St. Louis)',
+    name: 'Pork Ribs',
     category: 'Pork',
     basePortionCooked: 0.5, // Half rack generally has 0.5 lb meat
     yieldPercentage: 0.4, // High bone ratio
@@ -188,7 +188,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'pork-sausage',
-    name: 'Sausage Links',
+    name: 'Sausage',
     category: 'Pork',
     basePortionCooked: 0.25,
     yieldPercentage: 0.9,
@@ -201,7 +201,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'pork-belly',
-    name: 'Pork Belly (Burnt Ends)',
+    name: 'Pork Belly',
     category: 'Pork',
     basePortionCooked: 0.35,
     yieldPercentage: 0.6,
@@ -214,7 +214,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'pork-chops',
-    name: 'Pork Chops (Thick Cut)',
+    name: 'Pork Chops',
     category: 'Pork',
     basePortionCooked: 0.4,
     yieldPercentage: 0.75,
@@ -227,7 +227,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'pork-tenderloin',
-    name: 'Pork Tenderloin / Loin',
+    name: 'Pork Tenderloin',
     category: 'Pork',
     basePortionCooked: 0.35,
     yieldPercentage: 0.80,
@@ -240,7 +240,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'pork-chicharrones',
-    name: 'Chicharrones (Fried Belly/Skin)',
+    name: 'Chicharrones',
     category: 'Pork',
     basePortionCooked: 0.25,
     yieldPercentage: 0.35, // Massive weight loss when rendering the fat out
@@ -293,34 +293,21 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     }
   },
   {
-    id: 'poultry-whole-turkey-smoked',
-    name: 'Whole Turkey (Smoked)',
-    category: 'Poultry',
-    basePortionCooked: 0.5,
-    yieldPercentage: 0.50, // Heavy bone structure loss
-    recommendations: {
-      tempF: '165°F (Breast), 175°F (Thigh)',
-      tempC: '74°C (Breast), 79°C (Thigh)',
-      wood: 'Apple, Cherry, Pecan',
-      notes: 'Spatchcock for even cooking or smoke whole at 275-300°F to get through the danger zone quickly and crisp the skin.'
-    }
-  },
-  {
-    id: 'poultry-whole-turkey-fried',
-    name: 'Whole Turkey (Deep Fried)',
+    id: 'poultry-whole-turkey',
+    name: 'Whole Turkey',
     category: 'Poultry',
     basePortionCooked: 0.5,
     yieldPercentage: 0.50,
     recommendations: {
-      tempF: '350°F (Peanut Oil)',
-      tempC: '175°C (Peanut Oil)',
-      wood: 'N/A (Fried)',
-      notes: 'Turn off the burner before lowering the bird! Fry for exactly 3.5 minutes per pound. Turkey must be 100% fully thawed.'
+      tempF: '165°F (Breast), 175°F (Thigh)',
+      tempC: '74°C (Breast), 79°C (Thigh)',
+      wood: 'Apple, Cherry, Pecan',
+      notes: 'Spatchcock for even cooking. Ensure the bird is fully thawed and dry before cooking. Brining is highly recommended for moisture.'
     }
   },
   {
     id: 'poultry-chicken-breast',
-    name: 'Chicken Breast (Boneless/Skinless)',
+    name: 'Chicken Breast',
     category: 'Poultry',
     basePortionCooked: 0.4,
     yieldPercentage: 0.75,
@@ -333,7 +320,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'poultry-leg-quarters',
-    name: 'Chicken Leg Quarters',
+    name: 'Leg Quarters',
     category: 'Poultry',
     basePortionCooked: 0.6,
     yieldPercentage: 0.55,
@@ -346,7 +333,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'poultry-drumsticks',
-    name: 'Chicken Drumsticks',
+    name: 'Drumsticks',
     category: 'Poultry',
     basePortionCooked: 0.5,
     yieldPercentage: 0.50,
@@ -361,7 +348,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   // SEAFOOD
   {
     id: 'seafood-salmon',
-    name: 'Salmon Filets',
+    name: 'Salmon',
     category: 'Seafood',
     basePortionCooked: 0.4,
     yieldPercentage: 0.85,
@@ -374,7 +361,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'seafood-shrimp',
-    name: 'Shrimp (Large/Jumbo)',
+    name: 'Shrimp',
     category: 'Seafood',
     basePortionCooked: 0.35,
     yieldPercentage: 0.9,
@@ -387,7 +374,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'seafood-white-fish',
-    name: 'White Fish (Mahi, Halibut)',
+    name: 'White Fish',
     category: 'Seafood',
     basePortionCooked: 0.4,
     yieldPercentage: 0.85,
@@ -400,7 +387,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
   {
     id: 'seafood-scallops',
-    name: 'Sea Scallops',
+    name: 'Scallops',
     category: 'Seafood',
     basePortionCooked: 0.3,
     yieldPercentage: 0.80,
