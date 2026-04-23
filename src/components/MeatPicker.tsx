@@ -44,35 +44,35 @@ export function MeatPicker({ selectedMeats, onChange }: Props) {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
         {MEAT_DATABASE.filter(m => m.category === activeCategory).map(meat => {
           const isSelected = selectedMeats.some(sm => sm.id === meat.id);
           return (
             <div 
               key={meat.id}
               onClick={() => toggleMeat(meat)}
-              className={`relative px-4 py-4 border rounded-xl cursor-pointer transition-all flex flex-col justify-between min-h-[110px] active:scale-95 ${
+              className={`group relative px-3 sm:px-4 py-4 sm:py-5 border rounded-2xl cursor-pointer transition-all duration-200 flex flex-col justify-between min-h-[115px] sm:min-h-[125px] active:scale-95 ${
                 isSelected 
-                  ? 'border-bbq-orange bg-bbq-orange text-white shadow-md' 
-                  : 'border-gray-200 bg-white shadow-sm hover:border-gray-300'
+                  ? 'border-bbq-orange bg-bbq-orange text-white shadow-[0_10px_20px_-5px_rgba(194,65,12,0.3)]' 
+                  : 'border-gray-200 bg-white hover:bg-gray-50 hover:border-gray-300 hover:-translate-y-1 shadow-sm hover:shadow-md'
               }`}
             >
-              <div className="mb-2 w-full">
-                <span className={`block text-base font-semibold leading-tight break-words ${isSelected ? 'text-white' : 'text-gray-900'}`}>
+              <div className="w-full">
+                <span className={`block text-[13px] sm:text-[15px] font-bold leading-tight break-normal ${isSelected ? 'text-white' : 'text-gray-900 group-hover:text-bbq-charcoal'}`}>
                   {meat.name}
                 </span>
               </div>
 
-              <div className="flex items-end justify-between mt-auto pt-2">
-                <p className={`text-sm leading-tight font-bold ${isSelected ? 'text-orange-100' : 'text-gray-500'}`}>
-                  Yields ~{Math.round(meat.yieldPercentage * 100)}% cooked.
-                </p>
-                <div className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 transition-all ${
+              <div className="flex items-end justify-between mt-3 sm:mt-4">
+                <div className={`px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md text-[9px] sm:text-[11px] font-black uppercase tracking-wider whitespace-nowrap ${isSelected ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-500'}`}>
+                  ~{Math.round(meat.yieldPercentage * 100)}% Yield
+                </div>
+                <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
                   isSelected 
-                    ? 'bg-white text-bbq-orange shadow-md scale-110 opacity-100' 
-                    : 'bg-gray-100 text-transparent scale-75 opacity-0'
+                    ? 'bg-white text-bbq-orange shadow-md scale-100' 
+                    : 'bg-gray-200/50 text-transparent scale-50 opacity-0'
                 }`}>
-                  <Check size={14} strokeWidth={4} />
+                  <Check size={14} className="sm:w-4 sm:h-4" strokeWidth={4} />
                 </div>
               </div>
             </div>
