@@ -51,19 +51,19 @@ export function MeatPicker({ selectedMeats, onChange }: Props) {
             <div 
               key={meat.id}
               onClick={() => toggleMeat(meat)}
-              className={`relative px-4 py-4 border rounded-xl cursor-pointer transition-all flex flex-col justify-between min-h-[110px] active:scale-95 overflow-hidden ${
+              className={`relative px-4 py-4 border rounded-xl cursor-pointer transition-all flex flex-col justify-between min-h-[110px] active:scale-95 ${
                 isSelected 
                   ? 'border-bbq-orange bg-bbq-orange text-white shadow-md' 
                   : 'border-gray-200 bg-white shadow-sm hover:border-gray-300'
               }`}
             >
-              <div className="flex justify-between items-start mb-2 pr-4">
-                <span className={`text-base font-semibold leading-tight break-words ${isSelected ? 'text-white' : 'text-gray-900'}`}>
+              <div className="mb-2 w-full">
+                <span className={`block text-base font-semibold leading-tight break-words ${isSelected ? 'text-white' : 'text-gray-900'}`}>
                   {meat.name}
                 </span>
               </div>
 
-              <div className="flex items-end justify-between mt-auto">
+              <div className="flex items-end justify-between mt-auto pt-2">
                 <p className={`text-sm leading-tight font-bold ${isSelected ? 'text-orange-100' : 'text-gray-500'}`}>
                   Yields ~{Math.round(meat.yieldPercentage * 100)}% cooked.
                 </p>
