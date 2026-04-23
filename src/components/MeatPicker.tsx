@@ -51,23 +51,23 @@ export function MeatPicker({ selectedMeats, onChange }: Props) {
             <div 
               key={meat.id}
               onClick={() => toggleMeat(meat)}
-              className={`px-4 py-4 border rounded-xl cursor-pointer transition-all flex flex-col justify-between min-h-[100px] active:scale-95 ${
+              className={`relative px-4 py-4 border rounded-xl cursor-pointer transition-all flex flex-col justify-between min-h-[110px] active:scale-95 overflow-hidden ${
                 isSelected 
                   ? 'border-bbq-orange bg-bbq-orange text-white shadow-md' 
                   : 'border-gray-200 bg-white shadow-sm'
               }`}
             >
-              <div className="flex justify-between items-start mb-2 gap-2">
+              <div className="flex justify-between items-start mb-2 gap-8">
                 <span className={`text-base font-semibold leading-tight break-words ${isSelected ? 'text-white' : 'text-gray-900'}`}>
                   {meat.name}
                 </span>
-                <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                  isSelected ? 'bg-white text-bbq-orange shadow-sm' : 'bg-gray-100 text-gray-400'
+                <div className={`absolute top-3 right-3 w-6 h-6 rounded-full flex items-center justify-center shrink-0 transition-all ${
+                  isSelected ? 'bg-white text-bbq-orange shadow-sm scale-100' : 'bg-gray-100/80 text-gray-400 scale-90'
                 }`}>
                   <Check size={14} strokeWidth={4} />
                 </div>
               </div>
-              <p className={`text-sm leading-tight font-bold ${isSelected ? 'text-orange-50' : 'text-gray-500'}`}>
+              <p className={`text-sm leading-tight font-bold mt-auto ${isSelected ? 'text-orange-50' : 'text-gray-500'}`}>
                 Yields ~{Math.round(meat.yieldPercentage * 100)}% cooked.
               </p>
             </div>
