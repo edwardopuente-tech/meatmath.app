@@ -44,28 +44,28 @@ export function MeatPicker({ selectedMeats, onChange }: Props) {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(130px,1fr))] gap-2 sm:gap-3">
         {MEAT_DATABASE.filter(m => m.category === activeCategory).map(meat => {
           const isSelected = selectedMeats.some(sm => sm.id === meat.id);
           return (
             <div 
               key={meat.id}
               onClick={() => toggleMeat(meat)}
-              className={`group relative px-4 py-5 border rounded-2xl cursor-pointer transition-all duration-200 flex flex-col justify-center min-h-[85px] sm:min-h-[105px] active:scale-95 ${
+              className={`group relative px-4 py-5 border rounded-2xl cursor-pointer transition-all duration-200 flex flex-col justify-center min-h-[90px] sm:min-h-[110px] active:scale-95 ${
                 isSelected 
                   ? 'border-bbq-orange bg-bbq-orange text-white shadow-[0_10px_20px_-5px_rgba(194,65,12,0.3)]' 
                   : 'border-gray-200 bg-white hover:bg-gray-50 hover:border-gray-300 hover:-translate-y-1 shadow-sm hover:shadow-md'
               }`}
             >
-              <div className="w-full pr-6">
-                <span className={`block text-sm sm:text-base font-bold leading-tight break-words ${isSelected ? 'text-white' : 'text-gray-900 group-hover:text-bbq-charcoal'}`}>
+              <div className="w-full pr-4 text-left">
+                <span className={`block text-xs sm:text-[14px] font-bold leading-tight break-normal overflow-wrap-normal ${isSelected ? 'text-white' : 'text-gray-900 group-hover:text-bbq-charcoal'}`}>
                   {meat.name}
                 </span>
               </div>
 
               {isSelected && (
-                <div className="absolute top-3 right-3 w-5 h-5 rounded-full bg-white text-bbq-orange flex items-center justify-center shadow-sm">
-                  <Check size={12} strokeWidth={4} />
+                <div className="absolute top-2 right-2 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white text-bbq-orange flex items-center justify-center shadow-sm">
+                  <Check size={10} className="sm:w-3 sm:h-3" strokeWidth={5} />
                 </div>
               )}
             </div>
