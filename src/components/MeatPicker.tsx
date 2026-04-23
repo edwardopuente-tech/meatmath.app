@@ -67,7 +67,7 @@ export function MeatPicker({ selectedMeats, onChange }: Props) {
                   <Check size={14} strokeWidth={4} />
                 </div>
               </div>
-              <p className={`text-xs leading-tight font-medium ${isSelected ? 'text-orange-100' : 'text-gray-500'}`}>
+              <p className={`text-sm leading-tight font-bold ${isSelected ? 'text-orange-50' : 'text-gray-500'}`}>
                 Yields ~{Math.round(meat.yieldPercentage * 100)}% cooked.
               </p>
             </div>

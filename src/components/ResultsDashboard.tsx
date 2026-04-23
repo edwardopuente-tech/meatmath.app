@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CalculationResult, GuestCount, MeasurementUnit } from '../types';
-import { X, Download } from 'lucide-react';
+import { X, Printer } from 'lucide-react';
 
 interface Props {
   results: CalculationResult[];
@@ -55,7 +55,7 @@ export function ResultsDashboard({ results, unit, totalRawImperial, totalRawMetr
               <p className="text-3xl font-black text-bbq-orange print:text-black">
                 Buy {formatWeight(res.rawWeightNeededImperial, res.rawWeightNeededMetric)} raw
               </p>
-              <p className="text-base text-gray-500 font-medium mt-1">
+              <p className="text-lg text-gray-600 font-semibold mt-1">
                 Yields ~{formatWeight(res.cookedWeightExpectedImperial, res.cookedWeightExpectedMetric)} cooked
               </p>
             </div>
@@ -116,7 +116,7 @@ export function ResultsDashboard({ results, unit, totalRawImperial, totalRawMetr
             onClick={() => setShowPreview(true)}
             className="mt-8 w-full bg-white text-black font-black py-4 rounded-2xl hover:bg-orange-50 transition-colors uppercase text-sm tracking-tighter no-print relative z-10 flex items-center justify-center gap-2"
           >
-            <Download size={18} /> Preview & Save PDF
+            <Printer size={18} /> PREVIEW AND PRINT
           </button>
         </div>
       </div>
@@ -127,7 +127,7 @@ export function ResultsDashboard({ results, unit, totalRawImperial, totalRawMetr
           <div className="bg-white w-full max-w-4xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden">
             {/* Modal Header */}
             <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between bg-gray-50">
-              <h3 className="font-bold text-lg">PDF Document Preview</h3>
+              <h3 className="font-bold text-lg">PRINT PREVIEW</h3>
               <button onClick={() => setShowPreview(false)} className="p-2 hover:bg-gray-200 rounded-full transition">
                 <X size={20} />
               </button>
@@ -155,7 +155,7 @@ export function ResultsDashboard({ results, unit, totalRawImperial, totalRawMetr
                               <p className="text-2xl font-black text-black">
                                 Buy {formatWeight(res.rawWeightNeededImperial, res.rawWeightNeededMetric)} raw
                               </p>
-                              <p className="text-sm font-medium text-gray-600">
+                              <p className="text-lg font-bold text-gray-600">
                                 Yields ~{formatWeight(res.cookedWeightExpectedImperial, res.cookedWeightExpectedMetric)} cooked
                               </p>
                             </div>
@@ -210,7 +210,7 @@ export function ResultsDashboard({ results, unit, totalRawImperial, totalRawMetr
                   }}
                   className="bg-bbq-orange text-white py-3 font-bold rounded-xl hover:bg-orange-600 flex justify-center items-center gap-2 transition"
                >
-                 <Download size={18} /> Save as PDF
+                 <Printer size={18} /> PRINT NOW
                </button>
             </div>
           </div>

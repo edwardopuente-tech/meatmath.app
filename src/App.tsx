@@ -25,23 +25,24 @@ export default function App() {
         
         {/* Intro */}
         <div className="mb-6 text-center sm:text-left no-print">
-          <h1 className="text-5xl md:text-6xl font-black tracking-tight text-gray-900 mb-3 leading-[1.1]">
-            Never under-feed <br className="sm:hidden" />a crowd again.
+          <h1 className="text-3xl md:text-5xl font-black tracking-tighter text-gray-900 mb-4 leading-[1.1] max-w-4xl">
+            <span className="text-bbq-orange">BBQ Meat Calculator:</span><br />
+            Buy Exactly What You Need.
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl">
-            Whether you're planning a cookout, wedding, tailgate, or family reunion—simply select your guests, pick your meats, and let the ultimate <strong>BBQ meat calculator</strong> do the rest.
+          <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl font-medium">
+            The smartest BBQ planner on the web. We handle the shrinkage rates and guest math so you can focus on the fire.
           </p>
         </div>
 
         {/* Trust Badge */}
-        <div className="bg-gray-50/80 border border-gray-200 rounded-2xl p-5 mb-10 flex gap-5 items-start no-print max-w-2xl mx-auto sm:mx-0">
-          <div className="bg-white border border-gray-200 p-3 rounded-xl text-bbq-orange shrink-0 shadow-sm">
-            <Calculator size={24} />
+        <div className="bg-gray-50/80 border border-gray-200 rounded-2xl p-5 mb-8 flex gap-4 items-start no-print max-w-2xl mx-auto sm:mx-0">
+          <div className="bg-white border border-gray-200 p-2.5 rounded-xl text-bbq-orange shrink-0 shadow-sm">
+            <Calculator size={20} />
           </div>
           <div>
-            <h3 className="text-base font-bold text-gray-900 mb-1.5">Pitmaster-Grade Precision</h3>
-            <p className="text-sm text-gray-600 leading-relaxed font-medium">
-              We execute the golden rule: <span className="font-mono bg-white px-2 py-0.5 rounded border border-gray-200 text-bbq-orange font-bold">Raw Meat = (People × Serving Size) / Yield</span>. 
+            <h3 className="text-base font-bold text-gray-900 mb-1">Pitmaster-Grade Precision</h3>
+            <p className="text-sm md:text-base text-gray-600 leading-relaxed font-medium">
+              We execute the golden rule: <span className="font-mono bg-white px-2 py-0.5 rounded border border-gray-200 text-bbq-orange font-bold whitespace-nowrap">Raw Meat = (People × Serving Size) / Yield</span>. 
               The engine automatically injects BBQ-specific real-world logic (shrinkage rates, kid sizes, and multi-meat spreads) so you don't have to calculate those manually!
             </p>
           </div>
