@@ -48,10 +48,10 @@ export function ResultsDashboard({ results, unit, totalRawImperial, totalRawMetr
           {/* Header / Meat Name */}
           <div className="bg-gray-50/50 border-b border-gray-100 px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between print:bg-white print:border-b-2 print:border-black">
             <div>
-              <div className="flex items-center gap-2">
-                <h3 className="text-xl font-bold text-gray-900">{res.meat.name}</h3>
-                {(res.meat.popularityWeight || 1.0) > 1.1 && (
-                  <span className="inline-block whitespace-nowrap bg-orange-100 text-bbq-orange text-[9px] sm:text-[10px] font-black px-1.5 sm:px-2 py-0.5 rounded-full uppercase tracking-widest border border-orange-200">
+              <div className="flex items-center flex-wrap sm:flex-nowrap gap-2">
+                <h3 className="text-xl font-bold text-gray-900 whitespace-nowrap">{res.meat.name}</h3>
+                {(res.meat.popularityWeight || 1.0) >= 1.1 && (
+                  <span className="inline-flex items-center whitespace-nowrap bg-orange-100 text-bbq-orange text-[9px] sm:text-[10px] font-black px-2 sm:px-2 py-0.5 rounded-full uppercase tracking-widest border border-orange-200 leading-none h-5 sm:h-6">
                     Guest favorite
                   </span>
                 )}
