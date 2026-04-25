@@ -19,6 +19,8 @@ export interface MeatDefinition {
   basePortionCooked: number; 
   // Yield percentage (cooked weight / raw weight) e.g. 0.5 for Brisket (50% loss)
   yieldPercentage: number;
+  // Popularity relative to others when multiple meats are selected (default 1.0)
+  popularityWeight?: number;
   recommendations: {
     tempF: string;
     tempC: string;

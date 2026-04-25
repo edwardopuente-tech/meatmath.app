@@ -14,11 +14,19 @@ export function Header({ unit, onUnitToggle }: Props) {
         
         {/* Logo Stack Container */}
         <div className="flex items-center gap-4 md:gap-6 group relative">
-          {/* Logo Icon (Hearth & Math) */}
-          <div className="relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-b from-white to-gray-200 border border-gray-300 shadow-[0_4px_10px_rgba(0,0,0,0.08)] overflow-hidden">
-            {/* Subtle Math Grid Overlay */}
-            <div className="absolute inset-0 opacity-[0.07] bg-[linear-gradient(rgba(0,0,0,1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,1)_1px,transparent_1px)] bg-[size:4px_4px]"></div>
-            
+          <img 
+            src="/logo.png" 
+            alt="MeatMath Logo" 
+            className="w-16 h-16 md:w-20 md:h-20 object-contain"
+            onError={(e) => {
+              // If logo.png doesn't exist yet, we show the fallback icon
+              e.currentTarget.style.display = 'none';
+              const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+              if (fallback) fallback.style.display = 'flex';
+            }}
+          />
+          {/* Logo Icon (Hearth & Math) - FALLBACK */}
+          <div style={{ display: 'none' }} className="relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-gray-50 border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.05)] overflow-hidden">
             {/* Core Flame Glow */}
             <div className="absolute w-[150%] h-[150%] bg-bbq-orange/15 blur-[12px] rounded-full bottom-[-50%]"></div>
 

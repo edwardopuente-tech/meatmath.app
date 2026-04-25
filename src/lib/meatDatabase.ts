@@ -8,6 +8,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Beef',
     basePortionCooked: 0.5, 
     yieldPercentage: 0.5, // 50% shrinkage
+    popularityWeight: 1.3,
     recommendations: {
       tempF: '200-205°F',
       tempC: '93-96°C',
@@ -21,6 +22,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Beef',
     basePortionCooked: 0.75, // Need more weight due to heavy bones
     yieldPercentage: 0.45, 
+    popularityWeight: 1.1,
     recommendations: {
       tempF: '200-205°F',
       tempC: '93-96°C',
@@ -34,6 +36,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Beef',
     basePortionCooked: 0.25, // 1/4 lb cooked output
     yieldPercentage: 0.75, // Standard 1/3 lb pre-cooked patty shrinks to 1/4 lb
+    popularityWeight: 1.1,
     recommendations: {
       tempF: '160°F',
       tempC: '71°C',
@@ -73,6 +76,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Beef',
     basePortionCooked: 0.35,
     yieldPercentage: 0.70, // Equals exactly 0.5 lbs raw per person (Tex-Mex catering gold standard)
+    popularityWeight: 1.4,
     recommendations: {
       tempF: '130-135°F',
       tempC: '54-57°C',
@@ -86,6 +90,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Beef',
     basePortionCooked: 0.3,
     yieldPercentage: 0.6,
+    popularityWeight: 0.6,
     recommendations: {
       tempF: '160°F',
       tempC: '71°C',
@@ -99,6 +104,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Beef',
     basePortionCooked: 0.8, // extremely high bone weight
     yieldPercentage: 0.40,  // very high loss due to fat and bone mass
+    popularityWeight: 1.2,
     recommendations: {
       tempF: '203-208°F',
       tempC: '95-98°C',
@@ -125,6 +131,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Beef',
     basePortionCooked: 0.5,
     yieldPercentage: 0.80,
+    popularityWeight: 1.15,
     recommendations: {
       tempF: '130°F (Med Rare)',
       tempC: '54°C (Med Rare)',
@@ -138,6 +145,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Beef',
     basePortionCooked: 0.35,
     yieldPercentage: 0.50,
+    popularityWeight: 1.15,
     recommendations: {
       tempF: '205-210°F',
       tempC: '96-99°C',
@@ -166,6 +174,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Pork',
     basePortionCooked: 0.33, // 1/3 lb cooked per person
     yieldPercentage: 0.50, // Leads to exactly 0.66 lbs raw per person (Catering standard)
+    popularityWeight: 1.2,
     recommendations: {
       tempF: '200-205°F',
       tempC: '93-96°C',
@@ -179,6 +188,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Pork',
     basePortionCooked: 0.5, // Half rack generally has 0.5 lb meat
     yieldPercentage: 0.4, // High bone ratio
+    popularityWeight: 1.25,
     recommendations: {
       tempF: '195-200°F',
       tempC: '90-93°C',
@@ -192,6 +202,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Pork',
     basePortionCooked: 0.25,
     yieldPercentage: 0.9,
+    popularityWeight: 1.1,
     recommendations: {
       tempF: '165°F',
       tempC: '74°C',
@@ -205,6 +216,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Pork',
     basePortionCooked: 0.35,
     yieldPercentage: 0.6,
+    popularityWeight: 1.1,
     recommendations: {
       tempF: '200-205°F',
       tempC: '93-96°C',
@@ -259,6 +271,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Poultry',
     basePortionCooked: 0.5,
     yieldPercentage: 0.6, // Bones & skin
+    popularityWeight: 1.15,
     recommendations: {
       tempF: '165°F (Breast), 175°F (Thigh)',
       tempC: '74°C (Breast), 79°C (Thigh)',
@@ -272,6 +285,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Poultry',
     basePortionCooked: 0.5,
     yieldPercentage: 0.5,
+    popularityWeight: 1.2,
     recommendations: {
       tempF: '175-180°F', // Higher temp crispier texture
       tempC: '80-82°C',
@@ -285,6 +299,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Poultry',
     basePortionCooked: 0.35,
     yieldPercentage: 0.75, // Chicken shrinks slightly less than steak fajitas
+    popularityWeight: 1.2,
     recommendations: {
       tempF: '165°F',
       tempC: '74°C',
@@ -298,6 +313,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Poultry',
     basePortionCooked: 0.5,
     yieldPercentage: 0.50,
+    popularityWeight: 1.1,
     recommendations: {
       tempF: '165°F (Breast), 175°F (Thigh)',
       tempC: '74°C (Breast), 79°C (Thigh)',
@@ -324,6 +340,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Poultry',
     basePortionCooked: 0.6,
     yieldPercentage: 0.55,
+    popularityWeight: 0.7,
     recommendations: {
       tempF: '175-185°F',
       tempC: '80-85°C',
@@ -352,6 +369,7 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     category: 'Seafood',
     basePortionCooked: 0.4,
     yieldPercentage: 0.85,
+    popularityWeight: 1.1,
     recommendations: {
       tempF: '135-145°F',
       tempC: '57-63°C',

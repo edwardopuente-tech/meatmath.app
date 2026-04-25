@@ -48,7 +48,14 @@ export function ResultsDashboard({ results, unit, totalRawImperial, totalRawMetr
           {/* Header / Meat Name */}
           <div className="bg-gray-50/50 border-b border-gray-100 px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between print:bg-white print:border-b-2 print:border-black">
             <div>
-              <h3 className="text-xl font-bold text-gray-900">{res.meat.name}</h3>
+              <div className="flex items-center gap-2">
+                <h3 className="text-xl font-bold text-gray-900">{res.meat.name}</h3>
+                {(res.meat.popularityWeight || 1.0) > 1.1 && (
+                  <span className="inline-block whitespace-nowrap bg-orange-100 text-bbq-orange text-[9px] sm:text-[10px] font-black px-1.5 sm:px-2 py-0.5 rounded-full uppercase tracking-widest border border-orange-200">
+                    Guest favorite
+                  </span>
+                )}
+              </div>
               <p className="text-sm text-gray-500 font-medium uppercase tracking-wider">{res.meat.category}</p>
             </div>
             <div className="mt-4 sm:mt-0 text-left sm:text-right bg-orange-50/50 p-4 rounded-2xl border border-orange-100/50 sm:bg-transparent sm:border-0 sm:p-0">
@@ -110,6 +117,11 @@ export function ResultsDashboard({ results, unit, totalRawImperial, totalRawMetr
             <p className="text-gray-400 text-xs mt-2 print:text-gray-500">
               Raw Meat weight suggested for purchase across {results.length} item{results.length > 1 ? 's' : ''}
             </p>
+            {results.length > 1 && (
+              <p className="text-orange-400/60 text-[10px] mt-4 font-mono uppercase tracking-widest no-print">
+                Note: Portions are automatically weighted based on guest popularity (e.g. Fajitas & Brisket prioritized over Chicken & Sausage).
+              </p>
+            )}
           </div>
 
           <button 
