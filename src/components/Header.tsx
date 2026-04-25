@@ -13,20 +13,28 @@ export function Header({ unit, onUnitToggle }: Props) {
       <div className="max-w-5xl mx-auto px-4 md:px-6 h-24 flex items-center justify-between">
         
         {/* Logo Stack Container */}
-        <div className="flex items-center gap-4 md:gap-6 group relative">
+        <div className="flex items-center gap-4 md:gap-6 group relative overflow-hidden">
           <img 
             src="/logo.png" 
             alt="MeatMath Logo" 
-            className="w-16 h-16 md:w-20 md:h-20 object-contain"
+            className="h-10 md:h-14 w-auto object-contain"
+            onLoad={(e) => {
+              // Hide the text-based brand info if a custom banner logo loads
+              const container = e.currentTarget.parentElement;
+              if (container) {
+                const textBrand = container.querySelector('.text-branding') as HTMLElement;
+                if (textBrand) textBrand.style.display = 'none';
+              }
+            }}
             onError={(e) => {
-              // If logo.png doesn't exist yet, we show the fallback icon
+              // If logo.png doesn't exist, hide image and show fallback
               e.currentTarget.style.display = 'none';
               const fallback = e.currentTarget.nextElementSibling as HTMLElement;
               if (fallback) fallback.style.display = 'flex';
             }}
           />
           {/* Logo Icon (Hearth & Math) - FALLBACK */}
-          <div style={{ display: 'none' }} className="relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-gray-50 border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.05)] overflow-hidden">
+          <div style={{ display: 'none' }} className="relative items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-gray-50 border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.05)] overflow-hidden">
             {/* Core Flame Glow */}
             <div className="absolute w-[150%] h-[150%] bg-bbq-orange/15 blur-[12px] rounded-full bottom-[-50%]"></div>
 
@@ -39,7 +47,7 @@ export function Header({ unit, onUnitToggle }: Props) {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center">
+          <div className="text-branding flex flex-col justify-center">
             {/* Hearth & Math Lettering */}
             <h1 className="text-2xl md:text-4xl font-black tracking-tighter text-gray-900 leading-none">
               MEAT<span className="text-bbq-orange">MATH</span>
