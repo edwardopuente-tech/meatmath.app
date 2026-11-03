@@ -1,5 +1,6 @@
 import React from 'react';
 import { Flame, Plus } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { MeasurementUnit } from '../types';
 
 interface Props {
@@ -13,7 +14,7 @@ export function Header({ unit, onUnitToggle }: Props) {
       <div className="max-w-5xl mx-auto px-4 md:px-6 h-24 flex items-center justify-between">
         
         {/* Logo Stack Container */}
-        <div className="flex items-center gap-4 md:gap-6 group relative">
+        <Link to="/" className="flex items-center gap-4 md:gap-6 group relative">
           {/* Logo Icon (Hearth & Math) */}
           <div className="relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-gray-50 border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.05)] overflow-hidden">
             {/* Core Flame Glow */}
@@ -37,24 +38,24 @@ export function Header({ unit, onUnitToggle }: Props) {
               The Pitmaster's Calculator
             </p>
           </div>
-        </div>
+        </Link>
 
         {/* Controls */}
-        <div className="flex items-center gap-4 sm:gap-6">
+        <div className="flex items-center gap-4 sm:gap-8">
           {/* Unit Toggle Switch */}
           <button 
             onClick={onUnitToggle}
-            className="relative flex items-center w-32 h-11 bg-gray-100/80 rounded-full p-1.5 border border-gray-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-bbq-orange focus:ring-offset-1 transition hover:bg-gray-200/50 shadow-inner"
+            className="flex relative items-center w-28 sm:w-32 h-10 sm:h-11 bg-gray-100/80 rounded-full p-1.5 border border-gray-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-bbq-orange focus:ring-offset-1 transition hover:bg-gray-200/50 shadow-inner"
             aria-label="Toggle Units"
           >
             {/* Sliding Pill */}
             <div 
-              className={`absolute top-1.5 left-1.5 bg-white w-[56px] h-8 rounded-full shadow-sm border border-gray-200 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-                unit === 'metric' ? 'translate-x-[58px]' : 'translate-x-0'
+              className={`absolute top-1 sm:top-1.5 left-1 sm:left-1.5 bg-white w-[50px] sm:w-[56px] h-7 sm:h-8 rounded-full shadow-sm border border-gray-200 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                unit === 'metric' ? 'translate-x-[52px] sm:translate-x-[58px]' : 'translate-x-0'
               }`} 
             />
             {/* Text Options */}
-            <div className="relative w-full flex text-sm font-bold z-10 uppercase tracking-[0.15em] pointer-events-none">
+            <div className="relative w-full flex text-xs sm:text-sm font-bold z-10 uppercase tracking-[0.15em] pointer-events-none">
               <span className={`flex-1 text-center transition-colors duration-300 ${unit === 'imperial' ? 'text-gray-900 drop-shadow-sm' : 'text-gray-400'}`}>
                 LBS
               </span>
@@ -69,3 +70,4 @@ export function Header({ unit, onUnitToggle }: Props) {
     </header>
   );
 }
+

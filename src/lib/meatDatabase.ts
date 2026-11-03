@@ -17,6 +17,36 @@ export const MEAT_DATABASE: MeatDefinition[] = [
     }
   },
   {
+    id: 'beef-shredded-tacos',
+    name: 'Shredded Beef',
+    category: 'Beef',
+    badge: 'Tacos & Tostadas',
+    basePortionCooked: 0.22, // Stretches significantly further for tacos, tostadas, and flautas
+    yieldPercentage: 0.75, // Boneless yield cooked/braised in savory consommé
+    popularityWeight: 1.35,
+    recommendations: {
+      tempF: '205-210°F (Shred-tender)',
+      tempC: '96-99°C',
+      wood: 'Oak, Mesquite, Pecan',
+      notes: 'High-yield cut! When shredded (carne deshebrada) for tacos or tostadas, meat goes significantly further than whole sliced steaks. A 10 lb batch feeds 35-45 generous tacos layered with cilantro, diced onion, salsa, and guacamole.'
+    }
+  },
+  {
+    id: 'beef-ground-taco',
+    name: 'Ground Beef',
+    category: 'Beef',
+    badge: 'Taco Meat',
+    basePortionCooked: 0.22, // Stretches across 2-3 crispy or soft tacos
+    yieldPercentage: 0.80, // Lean ground beef browned with seasoning
+    popularityWeight: 1.2,
+    recommendations: {
+      tempF: '160°F',
+      tempC: '71°C',
+      wood: 'N/A (Skillet / Flat-top)',
+      notes: 'High-yield taco filling! Brown 80/20 or 85/15 ground beef with cumin, chili powder, and garlic. Yields 35-45 crispy or soft tacos with minimal shrinkage.'
+    }
+  },
+  {
     id: 'beef-ribs',
     name: 'Short Ribs',
     category: 'Beef',
@@ -265,6 +295,21 @@ export const MEAT_DATABASE: MeatDefinition[] = [
   },
 
   // POULTRY
+  {
+    id: 'poultry-shredded-chicken',
+    name: 'Shredded Chicken',
+    category: 'Poultry',
+    badge: 'Tostadas & Tacos',
+    basePortionCooked: 0.22, // Stretches significantly further as a tostada/taco topping
+    yieldPercentage: 0.75, // Boneless meat yield (no bone waste)
+    popularityWeight: 1.25,
+    recommendations: {
+      tempF: '165°F (Cook to 195-200°F to shred)',
+      tempC: '74°C (Cook to 90-93°C to shred)',
+      wood: 'Apple, Pecan, Cherry',
+      notes: 'High-yield cut! When shredded and used as a topping on tostadas, tacos, or tinga, meat goes significantly further since it distributes evenly over beans, crema, and salsa.'
+    }
+  },
   {
     id: 'poultry-whole',
     name: 'Whole Chicken',

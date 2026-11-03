@@ -27,6 +27,7 @@ export interface MeatDefinition {
     wood: string;
     notes: string;
   };
+  badge?: string;
   isCustom?: boolean;
 }
 

@@ -31,6 +31,14 @@ export function SeoFaqSection() {
             </p>
           </div>
 
+          {/* Shredded Beef & Chicken for Tacos / Tostadas */}
+          <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+            <h3 className="text-lg font-bold text-bbq-charcoal mb-2">Why do shredded beef and chicken yield so much more for tacos & tostadas?</h3>
+            <p className="text-base text-gray-600 leading-relaxed">
+              Shredded meats (such as <em>carne deshebrada</em> and shredded chicken) yield significantly more servings per pound than bone-in or whole-muscle cuts. Because they use boneless beef or poultry with zero bone waste, they achieve a high <strong>75% to 80% yield</strong>. Furthermore, when shredded and served in tacos or on crispy tostadas, guests only need about <strong>0.20 to 0.25 lbs (approx. 3.5 ounces) of cooked meat per person</strong> when loaded with toppings like refried beans, shredded cabbage, cotija cheese, guacamole, and salsa. As a result, 10 pounds of raw boneless beef or chicken easily tops 35 to 45 generous tacos or tostadas!
+            </p>
+          </div>
+
           {/* Tool / Calculator Targets */}
           <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
             <h3 className="text-lg font-bold text-bbq-charcoal mb-2">How does this catering food calculation work?</h3>

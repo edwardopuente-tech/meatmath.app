@@ -50,7 +50,12 @@ export function ResultsDashboard({ results, unit, totalRawImperial, totalRawMetr
             <div>
               <div className="flex items-center flex-wrap sm:flex-nowrap gap-2">
                 <h3 className="text-xl font-bold text-gray-900 whitespace-nowrap">{res.meat.name}</h3>
-                {(res.meat.popularityWeight || 1.0) >= 1.1 && (
+                {res.meat.badge && (
+                  <span className="inline-flex items-center whitespace-nowrap bg-amber-100 text-amber-900 text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-widest border border-amber-200 leading-none h-5 sm:h-6">
+                    {res.meat.badge}
+                  </span>
+                )}
+                {(res.meat.popularityWeight || 1.0) >= 1.1 && !res.meat.badge && (
                   <span className="inline-flex items-center whitespace-nowrap bg-orange-100 text-bbq-orange text-[9px] sm:text-[10px] font-black px-2 sm:px-2 py-0.5 rounded-full uppercase tracking-widest border border-orange-200 leading-none h-5 sm:h-6">
                     Guest favorite
                   </span>
@@ -160,7 +165,14 @@ export function ResultsDashboard({ results, unit, totalRawImperial, totalRawMetr
                       <div key={i} className="border-2 border-black p-5">
                          <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b-2 border-black pb-4 mb-4">
                             <div>
-                              <h3 className="text-xl font-bold text-black">{res.meat.name}</h3>
+                              <div className="flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-black">{res.meat.name}</h3>
+                                {res.meat.badge && (
+                                  <span className="text-[10px] font-bold border border-black px-1.5 py-0.5 uppercase tracking-wider">
+                                    {res.meat.badge}
+                                  </span>
+                                )}
+                              </div>
                               <p className="text-xs font-bold uppercase tracking-widest text-gray-500">{res.meat.category}</p>
                             </div>
                             <div className="mt-2 sm:mt-0 sm:text-right">

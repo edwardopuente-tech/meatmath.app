@@ -61,6 +61,13 @@ export function MeatPicker({ selectedMeats, onChange }: Props) {
                 <span className={`block text-xs sm:text-[14px] font-extrabold leading-tight break-normal overflow-wrap-normal uppercase tracking-wider ${isSelected ? 'text-white' : 'text-gray-900 group-hover:text-bbq-charcoal'}`}>
                   {meat.name}
                 </span>
+                {meat.badge && (
+                  <span className={`inline-block mt-1 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider ${
+                    isSelected ? 'bg-white/25 text-white' : 'bg-orange-100 text-bbq-orange'
+                  }`}>
+                    {meat.badge}
+                  </span>
+                )}
               </div>
 
               {isSelected && (
